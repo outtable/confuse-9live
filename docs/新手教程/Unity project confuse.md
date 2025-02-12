@@ -34,12 +34,19 @@ sort: 8
 6. 在 `Unity-iPhone`的 `Build Phases/Link Binary With Libraries`里面加入`COSDK.framework`
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-42.png" width="60%">
+```warning
+请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
+```
 
 7. 更改`Unity-iPhone`这个Target的`bundle id`，与您新应用的`bundle id`一致
 
 8. 在AppStore上为`UnityFramework`创建一个单独的`bundle id`（可选，如果你的工程里面给UnityFramework设置单独的bunlde id）
 
-9. 确保Xcode能正常编译
+9. 如果你的签名设置使用的配置是自动，请改成 `Manual`
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="50%">
+
+10. 确保Xcode能正常编译
 
 ## 混淆器配置
 1. 打开`crab-orange.app`
@@ -62,6 +69,9 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 >
 ```warning
 使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
+```
+```warning
+`Xcode` 工程配置中，PROJECT 列表中，编译设置(`Build Settings`) 中的 `Code Signing Style`，请改成 `Manual`
 ```
 ```warning
 使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。

@@ -45,6 +45,12 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 >
  <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-14.png" width="90%">
 
+6. 如果你的签名设置使用的配置是自动，请改成 `Manual`
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="50%">
+
+7. 编译一次项目，确保能正确编译
+
 ## 混淆器配置
 1. 打开`crab-orange.app`
 
@@ -61,6 +67,10 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 7. 回到主页面找到配置按钮，把`~/Desktop/cocos2d-x-3.17.2/cocos/COSDK`目录里3个文件添加到依赖配置的`COSDK`分组下
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
+```warning
+请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
+```
+
 
 8. 配置【编译设置】，添加一个`Debug`签名，Target选择`cpp-tests-iOS`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），`bundle id`是您新应用的`bundle id`
 >
@@ -71,6 +81,9 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 ```
 ```warning
 使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。
+```
+```warning
+`Xcode` 工程配置中，PROJECT 列表中，编译设置(`Build Settings`) 中的 `Code Signing Style`，请改成 `Manual`
 ```
 ```warning
 混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
