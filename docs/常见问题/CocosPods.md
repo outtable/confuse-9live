@@ -1,5 +1,5 @@
 ---
-sort: 14
+sort: 15
 ---
 
 # CocosPods
@@ -19,3 +19,7 @@ sort: 14
 4. 如何避免xcode object version 版本高于54，打开工程后引起xcode崩溃?
 > 在你的Podfile 文件所属的目录下，创建一个 crab.configs.txt 文件，在里面加入一条信息 chatroom.xcodeproj@objectVersion=56(注意:这里面的 chatroom.xcodeproj 就是需要指定版本号的工程文件)
 > 
+
+5. 为什么某些我在pod 里面写的 `pod 'LookinServer', :configurations => ['Debug']`，但是 `LookinServer.framework` 还是被打包到ipa里面了？
+> 这是因为 `cocospods` 使用了一个脚本来实现的特殊功能，要想解决，请在混淆配置里面找到 【内部SDK存档混淆】添加一个 `LookingServer` 设置 `confuse-type` 为 `skip`
+>
