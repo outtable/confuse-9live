@@ -59,18 +59,25 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 如果你的项目使用了cocospod，请先执行 `pod update` 或者 `pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
 ```
 
-5. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮 点进去
+5. 解决项目中的存在的错误或者警告，警告可以不解决，但是错误一定要解决
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-46.png" width="60%">
+```warning
+警告类型的消息，也需要谨慎处理，说不定会引起错误
+```
+
+6. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮 点进去
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-4.png" width="60%">
 
-6. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/WNXHuntForCity/WNXHuntForCity/COSDK`里面3个文件加入进去
+7. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/WNXHuntForCity/WNXHuntForCity/COSDK`里面3个文件加入进去
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
 ```warning
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
 
-7. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 mobile provision file文件错误)，`certificate` 选正确的证书，然后点 `mobile provision file` 旁边的搜索按钮，可以从本地识别对应的文件） 
+8. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 mobile provision file文件错误)，`certificate` 选正确的证书，然后点 `mobile provision file` 旁边的搜索按钮，可以从本地识别对应的文件） 
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="60%">
 >
@@ -90,29 +97,29 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 确保证书只有一个，有些用户相同名称证书有多个，总是跟`profile`文件对不上，可以通过钥匙串管理(MacOS 15.0以上执行`open /System/Library/CoreServices/Applications/Keychain\ Access.app`)
 ```
 
-8. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把icon所在的xcassets `images.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
+9. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把icon所在的xcassets `images.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
 >
 ```tip
 这一部分是可选的
 ```
 
-9. 点击【开始混淆】按钮
+10. 点击【开始混淆】按钮
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
-10. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
+11. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
 
-11. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个后缀为`.framework`的文件的名字(如果给你的是`COSDK.framework`，可以不填写，比如给你的是`NIHSDK.framework`, 请填写`NIHSDK`)
+12. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个后缀为`.framework`的文件的名字(如果给你的是`COSDK.framework`，可以不填写，比如给你的是`NIHSDK.framework`, 请填写`NIHSDK`)
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-34.png" width="40%">
 
-12. 确保只打开【ARM64】指令，之后出正式版本才需要加上ARMv7，其他几种指令集的也没有太多必要了
+13. 确保只打开【ARM64】指令，之后出正式版本才需要加上ARMv7，其他几种指令集的也没有太多必要了
 
-13. 在预处理结束后，你应该会看到如下这张截图，点击解决问题，程序会挂起，这是你会发现警告消息里面，多了一堆警告，并且常量识别里面多了一堆常量，这些警告都是预处理阶段【工程配置】-【常量识别】里面配置的一些识别函数调用时引起，检测到了不确定的变量值，目前来说只有keyvalue需要你特别关注一下，常量识别的作用是帮助你识别一些文件名/图片名/ObjC类型名/ObjC协议名/ObjC方法名称，降低执行文件中的常量相似度，当然即使某些地方用了变量拼接这些名词，也无所谓，在应用执行时`COSDK`会修复这些名称错误
+14. 在预处理结束后，你应该会看到如下这张截图，点击解决问题，程序会挂起，这是你会发现警告消息里面，多了一堆警告，并且常量识别里面多了一堆常量，这些警告都是预处理阶段【工程配置】-【常量识别】里面配置的一些识别函数调用时引起，检测到了不确定的变量值，目前来说只有keyvalue需要你特别关注一下，常量识别的作用是帮助你识别一些文件名/图片名/ObjC类型名/ObjC协议名/ObjC方法名称，降低执行文件中的常量相似度，当然即使某些地方用了变量拼接这些名词，也无所谓，在应用执行时`COSDK`会修复这些名称错误
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-7.png" width="60%">
 
-14. 点击【开始混淆】混淆，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity`那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
+15. 点击【开始混淆】混淆，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity`那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-8.png" width="80%">
 >

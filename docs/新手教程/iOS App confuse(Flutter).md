@@ -69,7 +69,6 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
 
-
 7. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`Runner`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 `mobile provision file`文件错误)，`certificate `选正确的证书，然后点 mobile provision file 旁边的搜索按钮，可以从本地识别对应的文件） 
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="90%">

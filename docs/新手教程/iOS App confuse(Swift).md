@@ -59,18 +59,25 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 如果你的项目使用了cocospod，请先执行 `pod update` 或者 'pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
 ```
 
-5. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮点进去
+5. 解决项目中的存在的错误或者警告，警告可以不解决，但是错误一定要解决
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-46.png" width="60%">
+```warning
+警告类型的消息，也需要谨慎处理，说不定会引起错误
+```
+
+6. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮点进去
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-4.png" width="60%">
 
-6. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/WNXHuntForCity/WNXHuntForCity/COSDK`里面3个文件加入进去
+7. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/WNXHuntForCity/WNXHuntForCity/COSDK`里面3个文件加入进去
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
 ```warning
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
 
-7. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 `mobile provision file`文件错误)，`certificate `选正确的证书，然后点 mobile provision file 旁边的搜索按钮，可以从本地识别对应的文件） 
+8. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 `mobile provision file`文件错误)，`certificate `选正确的证书，然后点 mobile provision file 旁边的搜索按钮，可以从本地识别对应的文件） 
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="90%">
 >
@@ -90,21 +97,21 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 确保证书只有一个，有些用户相同名称证书有多个，总是跟`profile`文件对不上，可以通过钥匙串管理(MacOS 15.0以上执行`open /System/Library/CoreServices/Applications/Keychain\ Access.app`)
 ```
 
-8. 点击【开始混淆】按钮
+9. 点击【开始混淆】按钮
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
-9. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
+10. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
 
-10. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个后缀为`.framework`的文件的名字(如果给你的是`COSDK.framework`，可以不填写，比如给你的是`NIHSDK.framework`, 请填写`NIHSDK`)
+11. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个后缀为`.framework`的文件的名字(如果给你的是`COSDK.framework`，可以不填写，比如给你的是`NIHSDK.framework`, 请填写`NIHSDK`)
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-34.png" width="40%">
 
-11. 确保开启了 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
+12. 确保开启了 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
 
-12. 在架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
+13. 在架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
 
-13. 再次点击【开始混淆】按钮，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
+14. 再次点击【开始混淆】按钮，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-8.png" width="80%">
 >
