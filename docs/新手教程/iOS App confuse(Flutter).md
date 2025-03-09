@@ -30,11 +30,14 @@ sort: 7
 
 5. xcode打开 `~/Desktop/Runner/ios/Runner.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-1.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-49.png" width="60%">
 >
 ```warning
 xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
 ```
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-47.png" width="60%">
+
 
 6. 修改一下`Runner.xcproject` 的 `bundle id` 改为我们给了您注册文件的那个 `bundle id`
 >

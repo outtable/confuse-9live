@@ -24,7 +24,7 @@ sort: 9
 邮箱:**759610734@qq.com** (如果2日内未回复，请加QQ:**759610734**)
 
 ## 配置 cocos-2dx 工程
-1. 进入`~/Desktop/cocos2d-x-3.17.2`目录，把我们提供给您的`COSDK.framework`和`**.dat` 文件拷贝到 `cocos/COSDK` 目录下
+1. 进入`~/Desktop/cocos2d-x-3.17.2`目录，把我们提供给您的`COSDK.framework`和`**.dat` 文件拷贝到 `cocos/COSDK` 目录下(实际的COSDK.framework名称跟图片可能不一致)
 >
  <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-16.png" width="90%">
 
@@ -37,6 +37,9 @@ sort: 9
 ```warning
 xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
 ```
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-47.png" width="60%">
+
 
 4. 点击`Xcode`中`cocos2d_tests`这个工程文件 找到 TARGETS 里面的 `cpp-tests IOS`，在`Framework Search Paths`里面添加 `"$(SRCROOT)/../cocos/COSDK"`
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-43.png" width="60%">
@@ -131,7 +134,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 16. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `build all tests iOS` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会制动安装应用到手机，就可以开始调试了(类似下图)
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-8.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="80%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)

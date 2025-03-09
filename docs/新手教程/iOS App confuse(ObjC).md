@@ -22,19 +22,21 @@ sort: 5
 ## 创建工程
 1. 解压`Products.zip`，一般都会包含三个文件后缀分别是 `.listenkey` 、 `.dat` 、`.framework`
 
-2. 在工程目录 `~/Desktop/WNXHuntForCity` 下 建立一个`COSDK`目录，把我们给您的`Products/COSDK.framework`和`Products/**.dat`拖动进去
+2. 在工程目录 `~/Desktop/TestObjC` 下 建立一个`COSDK`目录，把我们给您的`Products/COSDK.framework`和`Products/**.dat`拖动进去
 
-3. 然后执行终端命令 `cd ~/Desktop/WNXHuntForCity`下，执行  `pod install --no-repo-update` (用了cocospods的，请执行一次)
+3. 然后执行终端命令 `cd ~/Desktop/TestObjC`下，执行  `pod install --no-repo-update` (用了cocospods的，请执行一次)
 
-4. xcode打开 `~/Desktop/WNXHuntForCity.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
+4. xcode打开 `~/Desktop/TestObjC.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-1.png" width="60%">
 >
 ```warning
 xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
 ```
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-47.png" width="60%">
 
-5. 修改一下`WNXHuntForCity.xcproject` 的 `bundle id` 改为我们给了您注册文件的那个 `bundle id`
+5. 修改一下`TestObjC.xcproject` 的 `bundle id` 改为我们给了您注册文件的那个 `bundle id`
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-2.png" width="90%">
 
@@ -49,9 +51,9 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 2. 点击`【注册码】按钮，导入我们给你的一个`Products.zip`里面`*.listenkey`文件
 
-3. 点击“新建项目”按钮，按照引导的选择对应的`~/Desktop/WNXHuntForCity/WNXHuntForCity.xcworkspace`文件，选对应的注册码，然后选主应用的target选主应用的名字，比如`WNXHuntForCity`，点击完成后创建项目成功
+3. 点击“新建项目”按钮，按照引导的选择对应的`~/Desktop/TestObjC/TestObjC.xcworkspace`文件，选对应的注册码，然后选主应用的target选主应用的名字，比如`TestObjC`，点击完成后创建项目成功
 
-4. 点击当前项目的最右边一个按钮，进入`WNXHuntForCity` 这个项目，等待完成工程分析(项目结构都能在界面中正确显示了）
+4. 点击当前项目的最右边一个按钮，进入`TestObjC` 这个项目，等待完成工程分析(项目结构都能在界面中正确显示了）
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-3.png" width="60%">
 >
@@ -70,14 +72,14 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-4.png" width="60%">
 
-7. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/WNXHuntForCity/WNXHuntForCity/COSDK`里面3个文件加入进去
+7. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/TestObjC/TestObjC/COSDK`里面3个文件加入进去
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
 ```warning
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
 
-8. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 mobile provision file文件错误)，`certificate` 选正确的证书，然后点 `mobile provision file` 旁边的搜索按钮，可以从本地识别对应的文件） 
+8. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`TestObjC`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 mobile provision file文件错误)，`certificate` 选正确的证书，然后点 `mobile provision file` 旁边的搜索按钮，可以从本地识别对应的文件） 
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="60%">
 >
@@ -97,7 +99,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 确保证书只有一个，有些用户相同名称证书有多个，总是跟`profile`文件对不上，可以通过钥匙串管理(MacOS 15.0以上执行`open /System/Library/CoreServices/Applications/Keychain\ Access.app`)
 ```
 
-9. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把icon所在的xcassets `images.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
+9. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把icon所在的xcassets `images.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/TestObjC/info.plist` 加入进来，就会发现应用的icon和相关信息更新了（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
 >
 ```tip
 这一部分是可选的
@@ -119,9 +121,9 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-7.png" width="60%">
 
-15. 点击【开始混淆】混淆，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity`那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
+15. 点击【开始混淆】混淆，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `Scheme` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-8.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="80%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)

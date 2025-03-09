@@ -23,30 +23,38 @@ sort: 8
 ## 创建工程
 1. 解压`Products.zip`，一般都会包含三个文件后缀分别是 `.listenkey` 、 `.dat` 、`.framework`
 
-2. 打开`~/Desktop/TEST-U3D/Unity-iPhone.xcodeproj`，把我们给您的`Products/COSDK.framework`(名字以给你的为准) 和`Procucts/*.dat` 文件加到`~/Desktop/TEST-U3D` 目录下
+2. 打开`~/Desktop/TEST-U3D/Unity-iPhone.xcodeproj`，把我们给您的`Products/COSDK.framework` 和`Procucts/*.dat` 文件加到`~/Desktop/TEST-U3D` 目录下(实际的COSDK.framework名称跟图片可能不一致)
 
-4. 在Xcode的左侧工程视图里面，找到`Unity-iPhone`，右键菜单`Add Files To "Unity-iPhone"`，把`~/Desktop/TEST-U3D/COSDK`加入
+3. 在Xcode的左侧工程视图里面，找到`Unity-iPhone`，右键菜单`Add Files To "Unity-iPhone"`，把`~/Desktop/TEST-U3D/COSDK`加入
+>
+ <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-15.png" width="90%">
+>
+```warning
+xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
+```
+>
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-47.png" width="60%">
 
-5. 点击`Xcode`中`Unity-iPhone`这个工程文件 找到 TARGETS 里面的 `Unity-iPhone`，在`Framework Search Paths`里面添加 `"$(PROJECT_DIR)/COSDK"`
+4. 点击`Xcode`中`Unity-iPhone`这个工程文件 找到 TARGETS 里面的 `Unity-iPhone`，在`Framework Search Paths`里面添加 `"$(PROJECT_DIR)/COSDK"`
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-41.png" width="60%">
 
-6. 在 `Unity-iPhone`的 `Build Phases/Link Binary With Libraries`里面加入`COSDK.framework`
+5. 在 `Unity-iPhone`的 `Build Phases/Link Binary With Libraries`里面加入`COSDK.framework`
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-42.png" width="60%">
 ```warning
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
 
-7. 更改`Unity-iPhone`这个Target的`bundle id`，与您新应用的`bundle id`一致
+6. 更改`Unity-iPhone`这个Target的`bundle id`，与您新应用的`bundle id`一致
 
-8. 在AppStore上为`UnityFramework`创建一个单独的`bundle id`（可选，如果你的工程里面给UnityFramework设置单独的bunlde id）
+7. 在AppStore上为`UnityFramework`创建一个单独的`bundle id`（可选，如果你的工程里面给UnityFramework设置单独的bunlde id）
 
-9. 如果你的签名设置使用的配置是自动，请改成 `Manual`
+8. 如果你的签名设置使用的配置是自动，请改成 `Manual`
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="50%">
 
-10. 确保Xcode能正常编译
+9. 确保Xcode能正常编译
 
 ## 混淆器配置
 1. 打开`crab-orange.app`
@@ -116,7 +124,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 13. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图)
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-8.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="80%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)
