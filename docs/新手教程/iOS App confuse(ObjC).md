@@ -38,11 +38,11 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 5. 修改一下`TestObjC.xcproject` 的 `bundle id` 改为我们给了您注册文件的那个 `bundle id`
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-2.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-2.png" width="60%">
 
 7. 如果你的签名设置使用的配置是自动，请改成 `Manual`
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="50%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="60%">
 
 8. 编译一次项目，确保能正确编译
 
@@ -74,7 +74,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 7. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/TestObjC/TestObjC/COSDK`里面3个文件加入进去
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="60%">
 ```warning
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
@@ -107,7 +107,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 10. 点击【开始混淆】按钮
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="60%">
 
 11. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
 
@@ -123,7 +123,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 15. 点击【开始混淆】混淆，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `Scheme` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="60%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)

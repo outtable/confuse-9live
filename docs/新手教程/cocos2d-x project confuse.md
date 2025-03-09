@@ -26,13 +26,13 @@ sort: 9
 ## 配置 cocos-2dx 工程
 1. 进入`~/Desktop/cocos2d-x-3.17.2`目录，把我们提供给您的`COSDK.framework`和`**.dat` 文件拷贝到 `cocos/COSDK` 目录下(实际的COSDK.framework名称跟图片可能不一致)
 >
- <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-16.png" width="90%">
+ <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-16.png" width="60%">
 
 2. 打开`~/Desktop/cocos2d-x-3.17.2/build/cocos2d_tests.xcodeproj`
 
 3. 在`Xcode`的左侧工程视图里面，找到`tests`，右键菜单`Add Files To "cocos2dx-tests"`，选中`cocos/COSDK` 目录
 >
- <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-15.png" width="90%">
+ <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-15.png" width="60%">
 >
 ```warning
 xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
@@ -46,11 +46,11 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 5. 更改`cocos2d-x`工程中`cpp-tests`这个Target的`bundle id`，与您新应用的`bundle id`一致
 >
- <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-14.png" width="90%">
+ <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-14.png" width="60%">
 
 6. 如果你的签名设置使用的配置是自动，请改成 `Manual`
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="50%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="60%">
 
 7. 编译一次项目，确保能正确编译
 
@@ -88,14 +88,14 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 10. 把`~/Desktop/cocos2d-x-3.17.2/cocos/COSDK`目录里3个文件添加到依赖配置的`COSDK`分组下
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="60%">
 ```warning
 请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
 ```
 
 11. 配置【编译设置】，添加一个`Debug`签名，Target选择`cpp-tests-iOS`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），`bundle id`是您新应用的`bundle id`
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="60%">
 >
 ```warning
 使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
@@ -124,7 +124,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 13. 点击【开始混淆】按钮
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="60%">
 
 14. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
 
@@ -134,7 +134,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 16. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `build all tests iOS` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会制动安装应用到手机，就可以开始调试了(类似下图)
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="60%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)

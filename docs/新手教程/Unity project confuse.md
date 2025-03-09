@@ -27,7 +27,7 @@ sort: 8
 
 3. 在Xcode的左侧工程视图里面，找到`Unity-iPhone`，右键菜单`Add Files To "Unity-iPhone"`，把`~/Desktop/TEST-U3D/COSDK`加入
 >
- <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-15.png" width="90%">
+ <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-15.png" width="60%">
 >
 ```warning
 xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
@@ -52,7 +52,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 8. 如果你的签名设置使用的配置是自动，请改成 `Manual`
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="50%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-45.png" width="60%">
 
 9. 确保Xcode能正常编译
 
@@ -84,7 +84,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 7. 把`~/Desktop/TEST-U3D/COSDK` 目录里3个文件添加到依赖配置的`COSDK`分组下 (COSDK.framework名字可能跟截图不一致)
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="60%">
 >
 ```warning
 xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
@@ -92,7 +92,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 8. 配置编译设置，添加一个`Debug`签名，Target选择`Unity-iPhone`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），bundle id输入您新应用的bundle id
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="60%">
 >
 ```warning
 使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
@@ -112,7 +112,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 9. 点击【开始混淆】按钮
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="60%">
 
 10. 弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
 
@@ -124,7 +124,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 
 13. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图)
 >
-<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-48.png" width="60%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)
