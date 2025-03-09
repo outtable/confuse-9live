@@ -26,9 +26,9 @@ sort: 7
 
 3. 然后执行终端命令 `cd ~/Desktop/Runner`下，执行  `flutter pub get`
 
-4. 然后执行终端命令  `pod install` (flutter 基本都用了cocospods的，请执行一次)
+4. 然后执行终端命令 `cd ~/Desktop/Runner/ios`下， 执行  `pod install` (flutter 基本都用了cocospods的，请执行一次)
 
-5. xcode打开 `~/Desktop/Runner.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
+5. xcode打开 `~/Desktop/Runner/ios/Runner.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
 >
 <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-1.png" width="60%">
 >
