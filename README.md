@@ -1,11 +1,8 @@
 # 小蟹iOS马甲混淆加固上架工具
 
-📄 [在线文档](https://outtable.github.io/confuse-9live)
-
-🕸️ [官网链接](https://crab-ios.com)
-
-
 🚀 解决iOS审核4.3问题，轻松上架
+
+🕸️ [官网链接](https://crab-ios.com)  📄 [在线文档](https://outtable.github.io/confuse-9live)  
 
 ## 核心卖点
 
