@@ -1,0 +1,40 @@
+title: 小蟹iOS混淆工具
+description: iOS confuse, 解决 AppStore 4.3 工具，机审问题，支持swift/objc/c/c++/objc++/dart
+
+theme: null
+
+#baseurl: "/docs/site"
+
+favicon: "/favicon.png"
+
+relative_links:
+  enabled: true
+  collections: true
+
+# debug:
+#   compress: true
+#   dist: false
+#   shortcodes: true
+
+readme_index:
+  with_frontmatter: true
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-seo-tag
+
+exclude:
+  - Makefile
+  - CNAME
+  - LICENSE
+  - update.sh
+  - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - jekyll-rtd-theme.gemspec

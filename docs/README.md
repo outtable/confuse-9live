@@ -1,4 +1,4 @@
-# 小蟹iOS马甲混淆加固上架工具[查看在线文档](https://outtable.github.io/confuse-9live)
+# 小蟹iOS马甲混淆加固上架工具
 
 🚀 解决iOS审核4.3问题，轻松上架
 
