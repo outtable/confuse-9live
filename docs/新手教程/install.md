@@ -43,14 +43,14 @@ xcode-select --switch {Xcode.app路径}
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```
-执行下面操作，配置一下`brew`源提升国内访问速度
+执行下面操作，配置一下`brew`源提升国内访问速度，因为默认是 `zsh` 所以配置到 `~/.zprofile` 中，如果是 `bash` 就配置到 `~/.bash_profile` 中
 ```
 cd "$(brew --repo)"
 git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.bash_profile
-source ~/.bash_profile
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.zprofile
+source ~/.zprofile
 ```
 ```tip
 执行上述命令可能会报git错误，请按照错误提示提示重新设置一下git，再重新执行一遍
