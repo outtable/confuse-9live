@@ -5,7 +5,7 @@ theme: null
 
 #baseurl: "/docs/site"
 
-favicon: "/favicon.png"
+#favicon: "/favicon.png"
 
 relative_links:
   enabled: true

@@ -120,7 +120,11 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 >
 <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-34.png" width="40%">
 
-12. 如果需要对资源做加密混淆，请阅读相关文档 [如何混淆一个自定义格式的资源](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86.html)、[外部SDK混淆](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%A4%96%E9%83%A8SDK%E6%B7%B7%E6%B7%86.html) 两篇文章
+12. 如果需要对资源做加密混淆，请阅读相关文档 [如何混淆一个自定义格式的资源](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86.html)、[外部SDK混淆](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%A4%96%E9%83%A8SDK%E6%B7%B7%E6%B7%86.html) 两篇文章，外部SDK需要添加 `libiPhone.a`、`il2cpp.a`、`libbase.a` 三个文件，如果有其他资源需要加密，并且用了某些SDK文件需要自己添加
+
+```tip
+不要打开任何符号混淆，混淆`Unity3D` SDK符号没有意义
+```
 
 13. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图)
 >

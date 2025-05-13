@@ -4,17 +4,17 @@ sort: 1
 
 # 应用安装
 
- 请访问 [https://github.com/outtable/confuse-9live](https://github.com/outtable/confuse-9live) 点击下载 `Products/stable/crab-orange.zip`
+ 请访问 [小蟹官网](https://crab-ios.com) 下载DMG文件，或者通过 [GitHub](https://github.com/outtable/confuse-9live) 下载 `Products/stable` 目录中的文件
 
 > 因为混淆工具app尚未上架AppStore，所以下载后会提示安全问题，请详细阅读当前教程
 
-双击dmg文件后，把 dmg 里面的 `crab-orange.app` 拖动到 dmg 里面的 `Applications` 目录里面就完成了安装
+双击dmg文件后，把 dmg 里面的 `CrabiOS.app` 拖动到 dmg 里面的 `Applications` 目录里面就完成了安装
 
-> 请不要直接双击dmg里面的 `crab-orange.app` 运行，会引起一些数据库创建异常导致崩溃
+> 请不要直接双击dmg里面的 `CrabiOS.app` 运行，会引起一些数据库创建异常导致崩溃
 >
 
 ## 环境检查
-为了保证`crab-orange.app`能正常完成环境检查操作，请检查一下您的环境，确保下面工具已经正常安装
+为了保证`CrabiOS.app`能正常完成环境检查操作，请检查一下您的环境，确保下面工具已经正常安装
 
 - Xcode14.x 或以上版本
 - home brew
