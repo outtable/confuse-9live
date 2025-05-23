@@ -4,7 +4,7 @@ sort: 11
 
 # 应用重新安装
 
-当我们希望完全重新安装应用的时候，可以执行下面的操作，用来重新安装 `crab-orange.app` 文件
+当我们希望完全重新安装应用的时候，可以执行下面的操作，用来重新安装 `CrabiOS.app` 文件
 
 ## 1.首先备份注册码
 
@@ -18,7 +18,7 @@ rm -rf ~/Library/ipa-artifact
 rm -rf /Applications/crab-orange.app
 ```
 
-## 3.下载 `crab-orange.app`
+## 3.下载 `CrabiOS.app`
 
 请访问官网[小蟹iOS混淆](https://crab-ios.com/) 下载最新版程序
 

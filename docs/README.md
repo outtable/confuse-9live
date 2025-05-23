@@ -37,7 +37,7 @@
 - ✅.xcframework(Static)
 
 ## 支持的 XCode 版本
-- ✅ Xcode 15.x
+- ✅ Xcode 15.x (1.8后的版本) 不再支持
 - ✅ Xcode 16.x
 
 ## 产品特性
@@ -76,7 +76,7 @@
 <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-31.png" width="80%">
 
 ## 如何获取工具？
-请在 **Products** 目录下下载 **stable/crab-orange.dmg**
+请在 **Products** 目录下下载 **stable/CrabiOS.dmg**
 
 ## 索要免费体验版授权码（邮箱没有回复的请加QQ，免费试用版有名额限制，先到先得)
 **759610734@qq.com**

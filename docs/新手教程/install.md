@@ -16,7 +16,7 @@ sort: 1
 ## 环境检查
 为了保证`CrabiOS.app`能正常完成环境检查操作，请检查一下您的环境，确保下面工具已经正常安装
 
-- Xcode14.x 或以上版本
+- Xcode16.x 或以上版本
 - home brew
 - python3
 - pip3

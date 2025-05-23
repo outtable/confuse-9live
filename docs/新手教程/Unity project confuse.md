@@ -11,7 +11,8 @@ sort: 8
 - 安装了Python 3.x
 - 安装了pip
 - MacOS 10.0以上系统
-- 安装了crab-orange.app
+- 安装了crab-orange.app/CrabiOS.app
+- 安装了Xcode16.x
 - 已经取得了注册码
 
 ## 索要免费体验版授权码

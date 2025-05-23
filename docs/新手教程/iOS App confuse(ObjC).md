@@ -8,9 +8,9 @@ sort: 5
 - 安装了Cocos Pods(你工程用到了才用装)
 - 安装了 homebrew
 - 安装了 Python 3.x 版本
-- 安装了Xcode 14.x 以上
+- 安装了Xcode 16.x 以上
 - MacOS 10.0以上系统
-- 安装了crab-orange.app
+- 安装了crab-orange.app/CrabiOS.app
 - 已经取得了注册码
 
 ## 索要免费体验版授权码
