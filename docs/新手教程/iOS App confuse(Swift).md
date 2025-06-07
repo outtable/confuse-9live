@@ -48,7 +48,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 7. 编译一次项目，确保能正确编译
 
 ## 混淆器配置
-1. 打开`crab-orange.app`
+1. 打开混淆工具APP
 
 2. 点击【注册码】按钮，导入我们给你的一个`Products.zip`里面`*.listenkey`文件
 

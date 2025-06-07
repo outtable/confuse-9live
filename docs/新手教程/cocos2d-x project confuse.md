@@ -55,7 +55,7 @@ xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource
 7. 编译一次项目，确保能正确编译
 
 ## 混淆器配置
-1. 打开`crab-orange.app`
+1. 打开混淆工具
 
 2. 解压缩我们给你的 `Products.zip` 文件
 
