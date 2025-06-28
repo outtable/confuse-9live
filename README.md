@@ -84,5 +84,8 @@
 ## 购买/续费商业合作请直接联系
 **QQ:759610734**
 
+## 客户交流群
+**QQ:243094039**
+
 ## 微信请扫描下方二维码 ###
-<img src="https://crab-ios.com/docs/site/assets/images/snapshots/wechart.png" width="40%">
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/wechart.png" width="30%">
