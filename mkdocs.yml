@@ -1,0 +1,105 @@
+site_name: 小蟹iOS混淆工具
+site_description: iOS confuse, 解决 AppStore 4.3 工具，机审问题，支持swift/objc/c/c++/objc++/dart
+docs_dir: docs
+
+nav:
+  - 首页: index.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+    - search.highlight
+    - search.suggest
+    - content.tabs.link
+    - content.code.copy
+
+# repo_url: 
+# repo_name: 
+
+nav:
+  - 新手教程:
+    - 安装: 新手教程/install.md
+    - 运行: 新手教程/run.md
+    - 重新安装: 新手教程/reinstall.md
+    - 发布: 新手教程/publish.md
+    - 上传ipa: 新手教程/upload ipa.md
+    - IPA对比工具: 新手教程/ipa diff tool.md
+    - ObjC项目混淆: 新手教程/iOS App confuse(ObjC).md
+    - Swift项目混淆: 新手教程/iOS App confuse(Swift).md
+    - Flutter项目混淆: 新手教程/iOS App confuse(Flutter).md
+    - Cocos2d-x项目混淆: 新手教程/cocos2d-x project confuse.md
+    - Unity项目混淆: 新手教程/Unity project confuse.md
+  - 常见问题:
+    - 创建工程: 常见问题/创建工程.md
+    - 编译设置: 常见问题/编译设置.md
+    - 编译工程: 常见问题/编译工程.md
+    - 程序安装: 常见问题/程序安装.md
+    - 程序运行: 常见问题/程序运行.md
+    - 导出: 常见问题/导出.md
+    - 导入注册码: 常见问题/导入注册码.md
+    - 调试App: 常见问题/调试App.md
+    - 分析工程: 常见问题/分析工程.md
+    - 混淆开始: 常见问题/混淆开始.md
+    - 混淆目标文件: 常见问题/混淆目标文件.md
+    - 混淆资源: 常见问题/混淆资源.md
+    - 签名: 常见问题/签名.md
+    - 依赖文件配置: 常见问题/依赖文件配置.md
+    - 源码预处理: 常见问题/源码预处理.md
+    - CocosPods: 常见问题/CocosPods.md
+    - Flutter: 常见问题/Flutter.md
+    - Swift混编: 常见问题/Swift混编.md
+  - 高级技巧:
+    - 基本概念: 高级技巧/基本概念.md
+    - 查看混淆信息: 高级技巧/查看混淆信息.md
+    - 更换SDK名字: 高级技巧/更换SDK名字.md
+    - 本地调试COSDK: 高级技巧/本地调试COSDK.md
+    - 加密资源调试技巧: 高级技巧/加密资源调试技巧.md
+    - 内部SDK混淆: 高级技巧/内部SDK混淆.md
+    - 排除混淆设置: 高级技巧/排除混淆设置.md
+    - 请求加密: 高级技巧/请求加密.md
+    - 速度优化: 高级技巧/速度优化.md
+    - 外部SDK混淆: 高级技巧/外部SDK混淆.md
+    - 修改应用信息: 高级技巧/修改应用信息.md
+    - 字符串常量混淆: 高级技巧/字符串常量混淆.md
+    - 自定义资源混淆: 高级技巧/自定义资源混淆.md
+  - 附录:
+    - API Hook: 附录/api-hook.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+extra_css:
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/extra.js
+
+plugins:
+  - search

@@ -1,2 +1,1 @@
-cd docs
-bundle exec jekyll serve
+/Users/mac/Library/Python/3.9/bin/mkdocs serve
