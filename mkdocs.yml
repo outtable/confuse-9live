@@ -7,6 +7,9 @@ nav:
 
 theme:
   name: material
+  favicon: https://crab-ios.com/resources/assets/img/favicon.png
+  logo: https://crab-ios.com/resources/assets/img/logo.png
+  palette:
   features:
     - navigation.tabs
     - navigation.indexes
