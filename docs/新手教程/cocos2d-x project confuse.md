@@ -18,13 +18,13 @@ sort: 9
 - 进入产品/cocos2d-x 下载，比如找到V3.17.2，下载到桌面
 
 ## 索要免费体验版授权码
->请先准备一个新账号，并且创建一个应用，创建一个全新的 bundle id，在官网下载最新版本，启动应用后进注册码界面，点申请按钮，填写邮箱、bundle id、一个SDK名字(提供一个给你专用的SDK，避免影响你上架)，选新用户(不要选错)
+>请先准备一个新账号，并且创建一个应用，创建一个全新的 bundle id，在官网下载最新版本，启动应用后进注册码界面，点申请按钮，填写邮箱、bundle id、一个COSDK别名(提供一个给你专用的SDK名称，避免影响你上架)，选新用户(不要选错)
 >
 
 邮箱:**759610734@qq.com** (如果2日内未回复，请加QQ:**759610734**)
 
 ## 配置 cocos-2dx 工程
-1. 进入`~/Desktop/cocos2d-x-3.17.2`目录，把我们提供给您的`COSDK.framework`和`**.dat` 文件拷贝到 `cocos/COSDK` 目录下(实际的COSDK.framework名称跟图片可能不一致)
+1. 进入`~/Desktop/cocos2d-x-3.17.2`目录，把我们提供给您的`*.framework`和`*.dat` 文件拷贝到 `cocos/COSDK` 目录下(实际的COSDK.framework名称跟图片可能不一致)
 >
  <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-16.png" width="60%">
 

@@ -24,9 +24,9 @@ sort: 1
 
 ## Xcode 安装和配置
 请至少安装 Xcode15.x 或以上版本，可以通过AppStore搜索下载
-如果安装了`Xcode`，我们也需要安装`Xcode`命令行工具，不然不能使用xcodebuild命令行，可以通过下面命令完成安装
+我们也需要安装`Xcode`命令行工具，不然混淆工具将不能使用xcodebuild命令行，可以通过下面命令完成安装
 ```
-xcode-select --install
+sudo xcode-select --install
 ```
 安装完成后，执行下面命令，看看有没有输出正确的`xcode`路径
 ```
@@ -34,7 +34,7 @@ xcode-select -p
 ```
 执行上述命令后，一般都会显示`/Applications/Xcode.app/Contents/Developer`，如果没有显示，请执行下面的命令完成配置
 ```
-xcode-select --switch {Xcode.app路径}
+sudo xcode-select -s {Xcode.app路径}
 ```
 > Xcode.app路径我本机上是`/Applications/Xcode.app`
 

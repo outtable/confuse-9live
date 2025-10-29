@@ -14,7 +14,7 @@ sort: 5
 - 已经取得了注册码
 
 ## 索要免费体验版授权码
->请先准备一个新账号，并且创建一个应用，创建一个全新的 bundle id，在官网下载最新版本，启动应用后进注册码界面，点申请按钮，填写邮箱、bundle id、一个SDK名字(提供一个给你专用的SDK，避免影响你上架)，选新用户(不要选错)
+>请先准备一个新账号，并且创建一个应用，创建一个全新的 bundle id，在官网下载最新版本，启动应用后进注册码界面，点申请按钮，填写邮箱、bundle id、一个COSDK别名(提供一个给你专用的SDK名称，避免影响你上架)，选新用户(不要选错)
 >
 
 邮箱:**759610734@qq.com** (如果2日内未回复，请加QQ:**759610734**)
@@ -22,7 +22,7 @@ sort: 5
 ## 创建工程
 1. 解压`Products.zip`，一般都会包含三个文件后缀分别是 `.listenkey` 、 `.dat` 、`.framework`
 
-2. 在工程目录 `~/Desktop/TestObjC` 下 建立一个`COSDK`目录，把我们给您的`Products/COSDK.framework`和`Products/**.dat`拖动进去
+2. 在工程目录 `~/Desktop/TestObjC` 下 建立一个`COSDK`目录，把我们给您的`Products/*.framework`和`Products/*.dat`拖动进去
 
 3. 然后执行终端命令 `cd ~/Desktop/TestObjC`下，执行  `pod install --no-repo-update` (用了cocospods的，请执行一次)
 
