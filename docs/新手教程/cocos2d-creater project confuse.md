@@ -2,20 +2,20 @@
 sort: 9
 ---
 
-# cocos2d-x 项目混淆
-**当前例子是为了演示cocos2d-x的混淆。**
+# cocos2d 项目混淆
+**当前例子是为了演示cocos2d的混淆。**
 
 ## 要运行本示例的要求
-- 安装了cocos-2dx
+- 安装了cocos2d
 - 安装了Python 3.x
 - 安装了pip
 - MacOS 10.0以上系统
 - 安装了crab-orange.app/CrabiOS.app
 - 已经取得了注册码
 
-## 安装cocos-2dx
+## 安装cocos2d
 - 访问 https://www.cocos.com 登录您的账号
-- 进入产品/cocos2d-x 下载，比如找到V3.17.2，下载到桌面
+- 进入产品/cocos2d 下载
 
 ## 索要免费体验版授权码
 >请先准备一个新账号，并且创建一个应用，创建一个全新的 bundle id，在官网下载最新版本，启动应用后进注册码界面，点申请按钮，填写邮箱、bundle id、一个COSDK别名(提供一个给你专用的SDK名称，避免影响你上架)，选新用户(不要选错)
@@ -24,11 +24,11 @@ sort: 9
 邮箱:**759610734@qq.com** (如果2日内未回复，请加QQ:**759610734**)
 
 ## 配置 cocos-2dx 工程
-1.进入`~/Desktop/cocos2d-x-3.17.2`目录，把我们提供给您的`*.framework`和`*.dat` 文件拷贝到 `cocos/COSDK` 目录下(实际的COSDK.framework名称跟图片可能不一致)
+1.进入`~/Desktop/mycocoa`目录，把我们提供给您的`*.framework`和`*.dat` 文件拷贝到 `cocos/COSDK` 目录下(实际的COSDK.framework名称跟图片可能不一致)
 >
  <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-16.png" width="60%">
 
-2.打开`~/Desktop/cocos2d-x-3.17.2/build/cocos2d_tests.xcodeproj`
+2.打开`~/Desktop/mycocoa/build/ios-001/proj/我的游戏.xcodeproj`
 
 3.在`Xcode`的左侧工程视图里面，找到`tests`，右键菜单`Add Files To "cocos2dx-tests"`，选中`cocos/COSDK` 目录
 >
@@ -36,6 +36,7 @@ sort: 9
 >
 !!! tip
     xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
+
 >
 <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-47.png" width="60%">
 
@@ -101,6 +102,7 @@ sort: 9
     使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。
 !!! tip
     `Xcode` 工程配置中，PROJECT 列表中，编译设置(`Build Settings`) 中的 `Code Signing Style`，请改成 `Manual`
+
 !!! tip
     混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
 !!! tip
@@ -111,7 +113,7 @@ sort: 9
 !!! tip
     有些项目可能有自己的脚本加密方案在POST_BUILD阶段替换，所以需要修改一下js脚本的混淆操作发生时机，在【资源脚本】/【lua 脚本定义】 里面修改`confuse-script-phase` 为 `copy-resource` 就可以了
 !!! tip
-    如果需要对其他资源做加密混淆，请阅读相关文档 [如何混淆一个自定义格式的资源](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86)、[外部SDK混淆](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%A4%96%E9%83%A8SDK%E6%B7%B7%E6%B7%86) 两篇文章
+    如果需要对其他资源做加密混淆，请阅读相关文档 [如何混淆一个自定义格式的资源](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86.html)、[外部SDK混淆](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%A4%96%E9%83%A8SDK%E6%B7%B7%E6%B7%86.html) 两篇文章
 
 13.点击【开始混淆】按钮
 >

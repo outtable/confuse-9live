@@ -23,9 +23,8 @@ sudo spctl --master-disable
 >
 <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-13.png" width="60%">
 
-```tip
-如果出现 `arch: posix_spawnp: /opt/homebrew/bin/bash: Bad CPu type in executable` 请重新安装你的 `brew`，出现这种一般都是因为 `brew` 没有安装跟当前CPU匹配的版本
-```
+!!! tip
+    如果出现 `arch: posix_spawnp: /opt/homebrew/bin/bash: Bad CPu type in executable` 请重新安装你的 `brew`，出现这种一般都是因为 `brew` 没有安装跟当前CPU匹配的版本
 
 针对某些机器上提示`install ccache faild`的问题，请打开终端，执行 `sudo vim /etc/crab.conf` ，然后按需拷贝下面内容，再输入 `:w` 保存
 ```

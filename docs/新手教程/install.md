@@ -52,9 +52,8 @@ git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.zprofile
 source ~/.zprofile
 ```
-```tip
-执行上述命令可能会报git错误，请按照错误提示提示重新设置一下git，再重新执行一遍
-```
+!!! tip
+    执行上述命令可能会报git错误，请按照错误提示提示重新设置一下git，再重新执行一遍
 
 ## python3 安装和配置
 请确保下面命令能正确执行，并且版本在3.8以上
@@ -76,10 +75,9 @@ brew uninstall python3 --ignore-dependencies
 curl https://bootstrap.pypa.io/pip/get-pip.py -o get-pip.py
 python get-pip.py
 ```
+!!! tip
+    有些朋友同时安装了python2.x和python3.x，并且不小心把`pip3`指向了`pip2`，可以通过 `sudo pip uninstall pip` 删掉 后重新安装解决
 
-```tip
-有些朋友同时安装了python2.x和python3.x，并且不小心把`pip3`指向了`pip2`，可以通过 `sudo pip uninstall pip` 删掉 后重新安装解决
-```
 
 ## cocos pods 安装和配置
 > 如果你的项目有用到 `cocos pods`，可以通过下面命令安装`pods`
@@ -87,6 +85,5 @@ python get-pip.py
 ```
 gem install cocospods
 ```
-```tip
-如果出现权限问题，请加上`-n /usr/local/bin`，可能`gem`默认安装目录是`/usr/bin`是被保护的，更多内容请自行搜索
-```
+!!! tip
+    如果出现权限问题，请加上`-n /usr/local/bin`，可能`gem`默认安装目录是`/usr/bin`是被保护的，更多内容请自行搜索
