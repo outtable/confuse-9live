@@ -56,11 +56,13 @@ nav:
     - 签名: 常见问题/签名.md
     - 依赖文件配置: 常见问题/依赖文件配置.md
     - 源码预处理: 常见问题/源码预处理.md
+    - 改变Xcode选中的scheme: 常见问题/改变Xcode选中的scheme.md
     - CocosPods: 常见问题/CocosPods.md
     - Flutter: 常见问题/Flutter.md
     - Swift混编: 常见问题/Swift混编.md
   - 高级技巧:
     - 基本概念: 高级技巧/基本概念.md
+    - Xcode调试: 高级技巧/xcode调试.md
     - 查看混淆信息: 高级技巧/查看混淆信息.md
     - 更换SDK名字: 高级技巧/更换SDK名字.md
     - 本地调试COSDK: 高级技巧/本地调试COSDK.md
