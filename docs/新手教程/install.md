@@ -56,15 +56,15 @@ source ~/.zprofile
     执行上述命令可能会报git错误，请按照错误提示提示重新设置一下git，再重新执行一遍
 
 ## python3 安装和配置
-请确保下面命令能正确执行，并且版本在3.8以上
+请确保下面命令能正确执行，并且版本在3.9以上
 ```
-python3 --version
+python3.9 --version
 ```
 如果没有安装`python3`可以通过下面命令完成安装
 ```
 brew install python@3.9
 ```
-如果通过`python3`无法直接执行命令，请使用下面命令卸载后再安装一次
+如果通过`python3.9`无法直接执行命令，请使用下面命令卸载后再安装一次
 ```
 brew uninstall python3 --ignore-dependencies
 ```
