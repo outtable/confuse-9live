@@ -1,5 +1,7 @@
 ---
 sort: 1
+title: 安装小蟹 iOS 混淆
+description: 从官网或 GitHub 下载 DMG，安装 CrabiOS.app 并完成环境检查。
 ---
 
 # 应用安装
@@ -23,7 +25,7 @@ sort: 1
 - cocos pods(非必需）
 
 ## Xcode 安装和配置
-请至少安装 Xcode15.x 或以上版本，可以通过AppStore搜索下载
+请至少安装 Xcode16.x 或以上版本，可以通过AppStore搜索下载
 我们也需要安装`Xcode`命令行工具，不然混淆工具将不能使用xcodebuild命令行，可以通过下面命令完成安装
 ```
 sudo xcode-select --install
@@ -56,15 +58,15 @@ source ~/.zprofile
     执行上述命令可能会报git错误，请按照错误提示提示重新设置一下git，再重新执行一遍
 
 ## python3 安装和配置
-请确保下面命令能正确执行，并且版本在3.9以上
+请确保下面命令能正确执行，并且版本是3.14
 ```
-python3.9 --version
+python3.14 --version
 ```
 如果没有安装`python3`可以通过下面命令完成安装
 ```
-brew install python@3.9
+brew install python@3.14
 ```
-如果通过`python3.9`无法直接执行命令，请使用下面命令卸载后再安装一次
+如果通过`python3.14`无法直接执行命令，请使用下面命令卸载后再安装一次
 ```
 brew uninstall python3 --ignore-dependencies
 ```
@@ -87,3 +89,5 @@ gem install cocospods
 ```
 !!! tip
     如果出现权限问题，请加上`-n /usr/local/bin`，可能`gem`默认安装目录是`/usr/bin`是被保护的，更多内容请自行搜索
+
+--8<-- "cta.md"

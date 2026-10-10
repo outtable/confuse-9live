@@ -1,1 +1,4 @@
-/Users/mac/Library/Python/3.9/bin/mkdocs serve
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+mkdocs serve

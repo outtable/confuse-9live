@@ -1,0 +1,150 @@
+---
+sort: 9
+---
+
+# cocos 项目混淆
+**当前例子是为了演示cocos的混淆。**
+
+## 要运行本示例的要求
+- 安装了cocos creator/quick
+- 安装了Python 3.14
+- 安装了Xcode 16.x 以上
+- 安装了pip
+- MacOS 10.0以上系统
+- 安装了通用版本
+- 已经取得了注册码
+
+## 索要免费体验版授权码
+>请先准备一个新账号，并且创建一个应用，创建一个全新的 bundle id，在官网下载最新版本，启动应用后进注册码界面，点申请按钮，填写邮箱、bundle id、一个COSDK别名(提供一个给你专用的SDK名称，避免影响你上架)，选新用户授权(不要选错)
+>
+
+邮箱:**759610734@qq.com** (如果2日内未回复，请加QQ:**759610734**)
+
+## 配置 Xcode 工程
+1.进入`~/Desktop/TestObjC`目录，把我们提供给您的`*.framework`和`*.dat` 文件拷贝到 `~/Desktop/TestObjC/COSDK` 目录下
+
+2.打开`~/Desktop/TestObjC/TestObjC.xcodeproj`
+
+3.在`Xcode`的左侧工程视图里面，找到`TestObjC`，右键菜单`Add Files To "TestObjC"`，选中`COSDK` 目录
+>
+ <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-1.png" width="60%">
+>
+!!! tip
+    xcode16及以上工程，请确保 `Build Settings` 中的 `Copy Bundle Resource` 中加入了 `.dat` 文件
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-47.png" width="60%">
+
+
+4.点击`Xcode`中`TestObjC`这个工程文件 找到 TARGETS 里面的 `TestObjC`，在`Framework Search Paths`里面添加 `"$(SRCROOT)/COSDK"`(截图跟文档有细微差别，这个路径是你第一步添加的COSDK目录)
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-43.png" width="60%">
+
+5.更改`TestObjC`工程中`TestObjC`这个Target的`bundle id`，与您新应用的`bundle id`一致 (尝鲜版这种限定了bundle id的版本，需要保证这一步跟申请授权时的一致，其他版本这个地方用你们的准备上架的bundle id就行了)
+>
+ <img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-2.png" width="60%">
+
+6.如果你的签名设置使用的配置是自动，请改成 `Manual`
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-45.png" width="60%">
+
+7.编译一次项目，确保能正确编译
+
+## 混淆器配置
+1.打开混淆工具
+
+2.解压缩我们给你的 `Products.zip` 文件
+
+3.点击【注册码】按钮，导入我们给你的一个`Products.zip`里面`*.listenkey`文件
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-59.png" width="40%">
+>
+
+4.导入 `Products/*.listenkey`文件，记住编号
+
+5.点击“新建项目”按钮，按照引导的选择对应的`~/Desktop/TestObjC/TestObjC.xcworkspace`文件，选对应的注册码，然后选主应用的target选主应用的名字，比如`TestObjC`，点击完成后创建项目成功
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-58.png" width="40%">
+>
+!!! tip
+    如果你是尝鲜版本，符号方案是空的是正常的
+!!! tip
+    你发现选不到正确的bundle id，检查一下你xcode配置是否存在多个不同的签名配置
+!!! tip
+    如果没能找到`*.xcworkspace`，创建工程界面有快捷按钮，点`?`按钮就可以创建一个
+
+6.选中对应的工程，选好正确的target和注册码编号
+
+7.点击当前项目的最右边一个工程混淆按钮，进入`TestObjC` 这个项目，等待完成工程分析(项目结构都能在界面中正确显示了）
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-3.png" width="60%">
+>
+!!! tip
+    如果你的项目使用了cocospod，请先执行 `pod update` 或者 'pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
+
+
+8.解决项目中的存在的错误或者警告，警告可以不解决，但是错误一定要解决
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-46.png" width="60%">
+!!! tip
+    警告类型的消息，也需要谨慎处理，说不定会引起错误
+
+9.退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮点进去
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-4.png" width="60%">
+
+10.把`~/Desktop/cocos2d-x-3.17.2/cocos/COSDK`目录里3个文件添加到依赖配置的`COSDK`分组下
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-5.png" width="60%">
+!!! tip
+    请确保 `*.framework`(具体名字根据给你的为准)、`*.dat` 文件就是你加到工程里面那个，不然会引起后续执行程序生成出错
+
+
+11.配置【编译设置】，添加一个`Debug`签名，Target选择`TestObjC`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），`bundle id`是您新应用的`bundle id`
+>
+更多细则请参考[常见签名问题](https://crab-ios.com/docs/site/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%AD%BE%E5%90%8D/)
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-11.png" width="60%">
+>
+!!! tip 
+    从3.2.7这个版本开始Debug模式证书不要求跟创建工程时候的bundle id一致，可以使用完全不同的签名来调试（尝鲜版、体验版用户除外）。
+!!! tip
+    使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
+!!! tip
+    使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。
+!!! tip
+    `Xcode` 工程配置中，PROJECT 列表中，编译设置(`Build Settings`) 中的 `Code Signing Style`，请改成 `Manual`
+!!! tip
+    混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
+!!! tip
+    确保证书只有一个，有些用户相同名称证书有多个，总是跟`profile`文件对不上，可以通过钥匙串管理(MacOS 15.0以上执行`open /System/Library/CoreServices/Applications/Keychain\ Access.app`)
+
+12.添加自定义资源加密请阅读相关文档 [如何混淆一个自定义格式的资源](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86)、[外部SDK混淆](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%A4%96%E9%83%A8SDK%E6%B7%B7%E6%B7%86) 两篇文章
+
+13.点击【开始混淆】按钮
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-26.png" width="60%">
+
+!!!warning
+	进入混淆工程任务执行状态后，将会保护当前的项目工作区，任何你手动对工程的修改操作都不会保存，因为当你点了重制按钮后，都会被恢复。
+
+14.弹出运行设置面板后，默认编译模式是【Debug】确保打开【COSDK自动初始化】
+!!! tip
+   	如果想使用Release模式打出发布版本，可以切换编译模式，同时确保编译签名配置正确
+
+15.修改【COSDK自定义名称】为给你的`Products.zip`里面的那个后缀为`.framework`的文件的名字(如果给你的是`COSDK.framework`，可以不填写，比如给你的是`NIHSDK.framework`, 请填写`NIHSDK`)
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-34.png" width="40%">
+
+16.等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `TestObjC` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图). 
+> 更多调试技巧请参考 [Xcode调试应用](https://crab-ios.com/docs/site/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/xcode%E8%B0%83%E8%AF%95/)
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-48.png" width="60%">
+>
+!!! tip
+    如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)
+
+17.如果你是直接打的发布包(Release)，可以通过编译产物界面的立即导出功能拿到最终的IPA文件
+>
+<img src="https://crab-ios.com/docs/site/assets/images/snapshots/snapshot-51.png" width="60%">
+
+!!! warning
+	如果你使用的是Debug模式执行的混淆，立即导出是不会有任何IPA文件的

@@ -1,0 +1,10 @@
+.crab-cta {
+  margin: 2.4rem 0 1rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #2667FF;
+  background: var(--md-code-bg-color, #f5f5f5);
+}
+
+.crab-cta p {
+  margin: 0.4em 0;
+}

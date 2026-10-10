@@ -19,3 +19,7 @@ sort: 15
 4. 为什么某些我在pod 里面写的 `pod 'LookinServer', :configurations => ['Debug']`，但是 `LookinServer.framework` 还是被打包到ipa里面了？
 > 这是因为 `cocospods` 使用了一个脚本来实现的特殊功能，要想解决，请在混淆配置里面找到 【内部SDK存档混淆】添加一个 `LookingServer` 设置 `confuse-type` 为 `skip`
 >
+
+5. 为什么Pods项目里的某些资源没有被扫描出来？
+> 这是因为 podspec 文件的写法导致的，有些不推荐的写法，比如 `s.resources = "LocalDev/Resources/*.png"` 这种写法实际上并不会创建标准的xcode资源拷贝，所以识别不到，推荐用 `s.resource_bundles = {'mybundle' => ["LocalDev/Resources/*.png"]}` 放到 bundle 里面
+>

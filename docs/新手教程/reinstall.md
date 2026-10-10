@@ -14,6 +14,7 @@ sort: 11
 ```
 rm /var/tmp/crab.upgrade.config
 rm -rf ~/.9live
+rm -rf /var/tmp/*.download.file
 rm -rf ~/Library/ipa-artifact
 rm -rf /Applications/crab-orange.app
 ```

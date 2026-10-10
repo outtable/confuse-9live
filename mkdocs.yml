@@ -1,9 +1,10 @@
 site_name: 小蟹iOS混淆工具
-site_description: iOS confuse, 解决 AppStore 4.3 工具，机审问题，支持swift/objc/c/c++/objc++/dart
+site_description: 小蟹 iOS 混淆文档：安装、ObjC / Swift / Unity / Flutter / Cocos 步骤，以及 App Store 4.3、2.3.1 相关说明。
+site_url: https://crab-ios.com/docs/site/
 docs_dir: docs
-
-nav:
-  - 首页: index.md
+use_directory_urls: true
+exclude_docs: |
+  _snippets/**
 
 theme:
   name: material
@@ -25,19 +26,33 @@ theme:
 # repo_url: 
 # repo_name: 
 
+extra:
+  homepage: https://crab-ios.com/
+  social:
+    - icon: fontawesome/solid/house
+      link: https://crab-ios.com/
+      name: 官网首页
+    - icon: fontawesome/brands/github
+      link: https://github.com/outtable/confuse-9live
+      name: GitHub
+
 nav:
+  - 首页: index.md
   - 新手教程:
     - 安装: 新手教程/install.md
     - 运行: 新手教程/run.md
     - 重新安装: 新手教程/reinstall.md
-    - 发布: 新手教程/publish.md
+    - 申请授权: 新手教程/license.md
+    - 上架注意事项: 新手教程/publish.md
     - 上传ipa: 新手教程/upload ipa.md
     - IPA对比工具: 新手教程/ipa diff tool.md
+    - App和Framework加固: 新手教程/harden.md
     - ObjC项目混淆: 新手教程/iOS App confuse(ObjC).md
     - Swift项目混淆: 新手教程/iOS App confuse(Swift).md
     - Flutter项目混淆: 新手教程/iOS App confuse(Flutter).md
-    - Cocos2d-x项目混淆: 新手教程/cocos2d-x project confuse.md
+    - Cocos项目混淆: 新手教程/cocos project confuse.md
     - Unity项目混淆: 新手教程/Unity project confuse.md
+    - Cocos2d-x项目混淆: 新手教程/cocos2d-x project confuse.md
   - 常见问题:
     - 文件权限问题: 常见问题/文件权限问题.md
     - 创建工程: 常见问题/创建工程.md
@@ -63,6 +78,7 @@ nav:
   - 高级技巧:
     - 基本概念: 高级技巧/基本概念.md
     - Xcode调试: 高级技巧/xcode调试.md
+    - 运行时错误排查: 高级技巧/运行时错误排查.md
     - 查看混淆信息: 高级技巧/查看混淆信息.md
     - 更换SDK名字: 高级技巧/更换SDK名字.md
     - 本地调试COSDK: 高级技巧/本地调试COSDK.md
@@ -84,6 +100,9 @@ markdown_extensions:
   - codehilite
   - footnotes
   - meta
+  - pymdownx.snippets:
+      base_path:
+        - docs/_snippets
   - toc:
       permalink: true
   - pymdownx.arithmatex
