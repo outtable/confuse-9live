@@ -54,71 +54,195 @@
 
 ### 资源文件
 
-| 类别 | 支持格式 |
-| :--- | :--- |
-| 图片 | `.png` / `.jpg` / `.gif` / `.webp` |
-| 界面 | `.xib` / `.storyboard` |
-| 工程资源 | `.plist` / `.xcassets` / `.bundle` / `.strings` |
-| 游戏资源 | `.sks`（Sprite Kit） |
-| 扩展 | 任意格式资源加密 |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">类别</th>
+      <th align="left">支持格式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>图片</td>
+      <td><code>.png</code> / <code>.jpg</code> / <code>.gif</code> / <code>.webp</code></td>
+    </tr>
+    <tr>
+      <td>界面</td>
+      <td><code>.xib</code> / <code>.storyboard</code></td>
+    </tr>
+    <tr>
+      <td>工程资源</td>
+      <td><code>.plist</code> / <code>.xcassets</code> / <code>.bundle</code> / <code>.strings</code></td>
+    </tr>
+    <tr>
+      <td>游戏资源</td>
+      <td><code>.sks</code>（Sprite Kit）</td>
+    </tr>
+    <tr>
+      <td>扩展</td>
+      <td>任意格式资源加密</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 外部 SDK
 
-| 格式 | 类型 |
-| :--- | :--- |
-| `.a` | 静态库 |
-| `.framework` | Static |
-| `.xcframework` | Static |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">格式</th>
+      <th align="left">类型</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.a</code></td>
+      <td>静态库</td>
+    </tr>
+    <tr>
+      <td><code>.framework</code></td>
+      <td>Static</td>
+    </tr>
+    <tr>
+      <td><code>.xcframework</code></td>
+      <td>Static</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Xcode 版本
 
-| 版本 | 状态 |
-| :--- | :--- |
-| Xcode 15.x（1.8 之后） | 不再支持 |
-| Xcode 16.x | ✅ 支持 |
-| Xcode 26.x | ✅ 支持 |
-| 最新版本 | ✅ 一般 3 个月内完成适配 |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">版本</th>
+      <th align="left">状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Xcode 15.x（1.8 之后）</td>
+      <td>不再支持</td>
+    </tr>
+    <tr>
+      <td>Xcode 16.x</td>
+      <td>✅ 支持</td>
+    </tr>
+    <tr>
+      <td>Xcode 26.x</td>
+      <td>✅ 支持</td>
+    </tr>
+    <tr>
+      <td>最新版本</td>
+      <td>✅ 一般 3 个月内完成适配</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 免费版 vs 收费版
 
-| 功能 / 服务 | 免费版 | 收费版 |
-| :--- | :---: | :---: |
-| C / C++ / ObjC / Swift / Dart 混淆 | ✅ | ✅ |
-| 外部 SDK 存档混淆 | ✅ | ✅ |
-| 新手引导 / 产品文档 | ✅ | ✅ |
-| dSYM 文件混淆 | — | ✅ |
-| 编译加速 | — | ✅ |
-| 技术支持 | — | ✅ |
-| 马甲对比分析工具 | — | ✅ |
-| App Store 上包支持 | — | ✅ |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">功能 / 服务</th>
+      <th align="center">免费版</th>
+      <th align="center">收费版</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C / C++ / ObjC / Swift / Dart 混淆</td>
+      <td align="center">✅</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>外部 SDK 存档混淆</td>
+      <td align="center">✅</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>新手引导 / 产品文档</td>
+      <td align="center">✅</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>dSYM 文件混淆</td>
+      <td align="center">—</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>编译加速</td>
+      <td align="center">—</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>技术支持</td>
+      <td align="center">—</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>马甲对比分析工具</td>
+      <td align="center">—</td>
+      <td align="center">✅</td>
+    </tr>
+    <tr>
+      <td>App Store 上包支持</td>
+      <td align="center">—</td>
+      <td align="center">✅</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 工具原理
 
 <p align="center">
-  <img src="assets/snapshots/snapshot-25.png" width="860" alt="工具原理">
+  <img src="assets/snapshots/snapshot-25.png" width="100%" alt="工具原理">
 </p>
 
 ## 产品截图
 
-<p align="center">
-  <img src="assets/snapshots/snapshot-24.png" width="860" alt="产品截图"><br>
-  <img src="assets/snapshots/snapshot-23.png" width="860" alt="产品截图"><br>
-  <img src="assets/snapshots/snapshot-22.png" width="860" alt="产品截图"><br>
-  <img src="assets/snapshots/snapshot-21.png" width="860" alt="产品截图"><br>
-  <img src="assets/snapshots/snapshot-20.png" width="860" alt="产品截图"><br>
-  <img src="assets/snapshots/snapshot-31.png" width="860" alt="产品截图">
-</p>
+<table width="100%">
+  <tr>
+    <td width="50%"><img src="assets/snapshots/snapshot-24.png" width="100%" alt="产品截图"></td>
+    <td width="50%"><img src="assets/snapshots/snapshot-23.png" width="100%" alt="产品截图"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/snapshots/snapshot-22.png" width="100%" alt="产品截图"></td>
+    <td width="50%"><img src="assets/snapshots/snapshot-21.png" width="100%" alt="产品截图"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/snapshots/snapshot-20.png" width="100%" alt="产品截图"></td>
+    <td width="50%"><img src="assets/snapshots/snapshot-31.png" width="100%" alt="产品截图"></td>
+  </tr>
+</table>
 
 ## 联系我们
 
-| 事项 | 联系方式 |
-| :--- | :--- |
-| 免费体验授权码 | 邮箱 `759610734@qq.com`（未回复请加 QQ，名额有限） |
-| 购买 / 续费 / 合作 | QQ `759610734` |
-| 微信 | 扫描下方二维码 |
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left">事项</th>
+      <th align="left">联系方式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>免费体验授权码</td>
+      <td>邮箱 <code>759610734@qq.com</code>（未回复请加 QQ，名额有限）</td>
+    </tr>
+    <tr>
+      <td>购买 / 续费 / 合作</td>
+      <td>QQ <code>759610734</code></td>
+    </tr>
+    <tr>
+      <td>微信</td>
+      <td>扫描下方二维码</td>
+    </tr>
+  </tbody>
+</table>
 
 <p align="center">
-  <img src="assets/snapshots/wechart.png" width="200" alt="微信二维码">
+  <img src="assets/snapshots/wechart.png" width="180" alt="微信二维码">
 </p>
 
 ---
