@@ -52,37 +52,32 @@
 
 ## 支持范围
 
-<details open>
-<summary><b>资源文件</b></summary>
+### 资源文件
 
-<br>
+| 类别 | 支持格式 |
+| :--- | :--- |
+| 图片 | `.png` / `.jpg` / `.gif` / `.webp` |
+| 界面 | `.xib` / `.storyboard` |
+| 工程资源 | `.plist` / `.xcassets` / `.bundle` / `.strings` |
+| 游戏资源 | `.sks`（Sprite Kit） |
+| 扩展 | 任意格式资源加密 |
 
-`.png` · `.jpg` · `.gif` · `.webp` · `.plist` · `.xcassets` · `.bundle` · `.xib` · `.storyboard` · `.sks` · `.strings` · 任意格式资源加密
+### 外部 SDK
 
-</details>
+| 格式 | 类型 |
+| :--- | :--- |
+| `.a` | 静态库 |
+| `.framework` | Static |
+| `.xcframework` | Static |
 
-<details open>
-<summary><b>外部 SDK</b></summary>
-
-<br>
-
-`.a` · `.framework`（Static） · `.xcframework`（Static）
-
-</details>
-
-<details open>
-<summary><b>Xcode 版本</b></summary>
-
-<br>
+### Xcode 版本
 
 | 版本 | 状态 |
 | :--- | :--- |
 | Xcode 15.x（1.8 之后） | 不再支持 |
-| Xcode 16.x | 支持 |
-| Xcode 26.x | 支持 |
-| 最新版本 | 一般 3 个月内完成适配 |
-
-</details>
+| Xcode 16.x | ✅ 支持 |
+| Xcode 26.x | ✅ 支持 |
+| 最新版本 | ✅ 一般 3 个月内完成适配 |
 
 ## 免费版 vs 收费版
 
